@@ -4,8 +4,8 @@ import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const navigate = useNavigate()
-    const token = localStorage.getItem("token");
-    const user = localStorage.getItem("user");
+    const token = localStorage?.getItem("token");
+    const user = localStorage?.getItem("user");
     const firstName = user ? JSON.parse(user).name.split(' ')[0] : 'Guest';
 
     const logout = () => {

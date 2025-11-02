@@ -11,7 +11,7 @@ const Home = () => {
     const user = localStorage.getItem("user");
     console.log(user);
 
-    const fullName = JSON.parse(user).name;
+    const fullName = JSON.parse(user)?.name || 'User';
     const firstName = user ? JSON.parse(user).name.split(' ')[0] : 'Guest';
     useEffect(() => {
         const fetchNotes = async () => {
